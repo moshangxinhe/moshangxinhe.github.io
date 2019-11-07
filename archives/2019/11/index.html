@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
 <meta property="og:title" content="漠上心河的博客">
 <meta property="og:url" content="http://moshangxinhe.github.io/archives/2019/11/index.html">
 <meta property="og:site_name" content="漠上心河的博客">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="漠上心河的博客">
 
@@ -74,7 +74,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -100,50 +102,12 @@
         </hgroup>
 
         
+        <p class="header-subtitle">加油！</p>
+        
 
         
 
 
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
         
 
         <div id="switch-area" class="switch-area">
@@ -176,12 +140,6 @@
                 </section>
                 
                 
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        
-                    </div>
-                </section>
-                
                 
                 
                 <section class="switch-part switch-part3">
@@ -201,7 +159,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">专注于后端</div>
                 </section>
                 
             </div>
@@ -223,6 +181,8 @@
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">漠上心河</a></h1>
             </hgroup>
+            
+            <p class="header-subtitle">加油！</p>
             
             <nav class="header-menu">
                 <ul>
@@ -271,7 +231,7 @@
     <header class="archive-article-header">
           <div class="article-meta">
               <a href="/2019/11/07/hello-world/" class="archive-article-date">
-      <time datetime="2019-11-07T01:51:37.675Z" itemprop="datePublished">11-07</time>
+      <time datetime="2019-11-07T03:32:07.000Z" itemprop="datePublished">11-07</time>
 </a>
 
 
@@ -373,7 +333,7 @@
             
              archives: ".archive-article-title", 
              miniArchives: "a.post-list-link", 
-            
+             menu: ".header-menu a", 
              friends: "#js-friends a", 
              socail: ".social a" 
         }
@@ -382,6 +342,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
