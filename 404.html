@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content=".article-header {         padding: 0;         padding-top: 26px;         border-left: none;         text-align: center;     }     .article-header:hover {         border-left: none;     }     .art">
+<meta name="description" content="/**      *  404 页面      */     (function() {          var lastTime = 0;          var vendors = [&apos;ms&apos;, &apos;moz&apos;, &apos;webkit&apos;, &apos;o&apos;];          for (var x = 0; x &amp;lt; vendors.length &amp;&amp; !window.requestAni">
 <meta property="og:type" content="website">
-<meta property="og:title" content="404">
+<meta property="og:title" content="漠上心河的博客">
 <meta property="og:url" content="http://moshangxinhe.github.io/404.html">
 <meta property="og:site_name" content="漠上心河的博客">
-<meta property="og:description" content=".article-header {         padding: 0;         padding-top: 26px;         border-left: none;         text-align: center;     }     .article-header:hover {         border-left: none;     }     .art">
+<meta property="og:description" content="/**      *  404 页面      */     (function() {          var lastTime = 0;          var vendors = [&apos;ms&apos;, &apos;moz&apos;, &apos;webkit&apos;, &apos;o&apos;];          for (var x = 0; x &amp;lt; vendors.length &amp;&amp; !window.requestAni">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-07T04:49:36.208Z">
+<meta property="og:updated_time" content="2019-11-07T05:11:35.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="404">
-<meta name="twitter:description" content=".article-header {         padding: 0;         padding-top: 26px;         border-left: none;         text-align: center;     }     .article-header:hover {         border-left: none;     }     .art">
+<meta name="twitter:title" content="漠上心河的博客">
+<meta name="twitter:description" content="/**      *  404 页面      */     (function() {          var lastTime = 0;          var vendors = [&apos;ms&apos;, &apos;moz&apos;, &apos;webkit&apos;, &apos;o&apos;];          for (var x = 0; x &amp;lt; vendors.length &amp;&amp; !window.requestAni">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>404 | 漠上心河的博客</title>
+<title>漠上心河的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: falsemain.styl
     }
 </script>
 
@@ -109,6 +109,13 @@
         <p class="header-subtitle">加油！</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -221,7 +228,7 @@
   
     <div class="article-meta">
       <a href="/404.html" class="article-date">
-      <time datetime="2019-11-07T04:47:50.000Z" itemprop="datePublished">2019-11-07</time>
+      <time datetime="2019-11-07T05:11:35.334Z" itemprop="datePublished">2019-11-07</time>
 </a>
 
 
@@ -231,24 +238,6 @@
     
       <input type="hidden" class="isFancy" />
     
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      404
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -272,63 +261,244 @@
 
 
           
-        <style type="text/css">
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover {
-        border-left: none;
-    }
-    .article-title {
-        font-size: 2.1em;
-    }
-    strong a {
-        color: #747474;
-    }
-    .article-meta {
-        display: none;
-    }
-    .share {
-        display: none;
-    }
-    .ds-meta {
-        display: none;
-    }
-    .player {
-        margin-left: -10px;
-    }
-    .sign {
-        text-align: right;
-        font-style: italic;
-    }
-      #page-visit {
-        display: none;
-    }
-    .center {
-        text-align: center;
-        height: 2.5em;
-        font-weight: bold;
-    }
-    .article-entry hr {
-        margin: 0;
-    }
-    .pic {
-        text-align: center;
-        margin: 0;
-    }
-    .pic br {
-          display: none;
+        <script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js"></script>
+
+<div id="yun"></div>
+
+<script>
+    /**
+     *  404 页面
+     */
+    (function() {
+         var lastTime = 0;
+         var vendors = ['ms', 'moz', 'webkit', 'o'];
+         for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+           window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+           window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+         }
+
+         if (!window.requestAnimationFrame)
+           window.requestAnimationFrame = function(callback, element) {
+             var currTime = new Date().getTime();
+             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+             var id = window.setTimeout(function() {
+                 callback(currTime + timeToCall);
+               },
+               timeToCall);
+             lastTime = currTime + timeToCall;
+             return id;
+           };
+
+         if (!window.cancelAnimationFrame)
+           window.cancelAnimationFrame = function(id) {
+             clearTimeout(id);
+           };
+       }());
+
+    //math2 utils
+    var Math2={};
+    Math2.random = function (t, n) {
+      return Math.random() * (n - t) + t
+    }, Math2.map = function (t, n, r, a, o) {
+      return (o - a) * ((t - n) / (r - n)) + a
+    }, Math2.randomPlusMinus = function (t) {
+      return t = t ? t : .5, Math.random() > t ? -1 : 1
+    }, Math2.randomInt = function (t, n) {
+      return n += 1, Math.floor(Math.random() * (n - t) + t)
+    }, Math2.randomBool = function (t) {
+      return t = t ? t : .5, Math.random() < t ? !0 : !1
+    }, Math2.degToRad = function (t) {
+      return rad = t * Math.PI / 180, rad
+    }, Math2.radToDeg = function (t) {
+      return deg = 180 / (Math.PI * t), deg
+    }, Math2.rgbToHex = function (t) {
+      function n(t) {
+        return ("0" + parseInt(t).toString(16)).slice(-2)
       }
-    #container .article-info-post.article-info {
-      display: none;
+      t = t.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+      var r = n(t[1]) + n(t[2]) + n(t[3]);
+      return r.toUpperCase()
+    }, Math2.distance = function (t, n, r, a) {
+      return Math.sqrt((r - t) * (r - t) + (a - n) * (a - n))
+    };
+    //mouse
+    var mousePos={
+      x:0,
+      y:0
+    };
+    window.onmousemove = function(e) {
+      e = e || window.event;
+
+      var pageX = e.pageX - 300;
+      var pageY = e.pageY + 350;
+      if (pageX === undefined) {
+        pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - 300;
+        pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop + 350;
       }
-    #container .article .article-title {
-    padding: 0;
+      mousePos = {
+        x: pageX,
+        y: pageY,
+      };
+    };
+
+    var options = {
+      width: 1000,
+      height: 1000,
+      keyword: "404",
+      density: 8,
+      densityText: 2,
+      minDist: 20,
+    };
+
+    // initialize canvas
+    var canvas = document.createElement('canvas');
+    canvas.width = options.width;
+    canvas.height = options.height;
+    canvas.style.width = options.width/2;
+    canvas.style.height = options.height/2;
+    canvas.getContext('2d').scale(2,2)
+
+    var renderer = new PIXI.autoDetectRenderer(options.width, options.height, {
+      transparent: true
+    });
+    var stage = new PIXI.Container("0X000000", true);
+    document.getElementById("yun").appendChild(renderer.view);
+    renderer.view.id = "notFound";
+
+    var imageData = false;
+    var particles =[];
+
+    function init() {
+      positionParticles();
+      positionText();
     }
-</style>
+
+    function positionParticles() {
+      var canvas = document.createElement("canvas");
+      canvas.width = 500;
+      canvas.height = 350;
+      var context = canvas.getContext("2d");
+      context.fillStyle = "#000000";
+      context.font = "300px 'Arial', sans-serif";
+      context.fillText(options.keyword, 0, 250);
+
+      var imageData = context.getImageData(0, 0, 350, 500);
+      data = imageData.data;
+
+      // Iterate each row and column
+      for (var i = 0; i < imageData.height; i += options.density) {
+        for (var j = 0; j < imageData.width; j += options.density) {
+
+          // Get the color of the pixel
+          var color = data[((j * (imageData.width * 4)) + (i * 4)) - 1];
+
+          // If the color is black, draw pixels
+          if (color == 255) {
+            var newPar = particle();
+            newPar.setPosition(i, j);
+            particles.push(newPar);
+            stage.addChild(newPar);
+          }
+        }
+      }
+    }
+
+    function positionText() {
+      var canvas = document.createElement("canvas");
+      canvas.width = 400;
+      canvas.height = 120;
+      var context = canvas.getContext("2d");
+      context.fillStyle = "#000000";
+      context.font = "80px 'Arial', sans-serif";
+      context.fillText("Not Found", 0, 80);
+
+      var imageData = context.getImageData(0, 0, 400, 400);
+      data = imageData.data;
+
+      // Iterate each row and column
+      for (var i = 0; i < imageData.height; i += options.densityText) {
+        for (var j = 0; j < imageData.width; j += options.densityText) {
+
+          // Get the color of the pixel
+          var color = data[((j * (imageData.width * 4)) + (i * 4)) - 1];
+
+          // If the color is black, draw pixels
+          if (color == 255) {
+            var newPar = particle(true);
+            newPar.setPosition(i, j);
+            particles.push(newPar);
+            stage.addChild(newPar);
+          }
+        }
+      }
+    }
+
+    function particle(text) {
+      $this = new PIXI.Graphics();
+
+      if (text == true) {
+        $this.text = true;
+      }
+
+      $this.beginFill(0X5CC9F5);
+
+      var radius;
+      $this.radius = radius = $this.text ? Math.random() * 3.5 : Math.random() * 10.5;
+
+      $this.drawCircle(0, 0, radius);
+
+      $this.size = this.radius;
+      $this.x = -this.width;
+      $this.y = -this.height;
+      $this.free = false;
+
+      $this.timer = Math2.randomInt(0, 100);
+      $this.v = Math2.randomPlusMinus() * Math2.random(.5, 1);
+      $this.hovered = false
+
+      $this.alpha = Math2.randomInt(10, 100) / 100;
+
+      $this.vy = -5 + parseInt(Math.random() * 10) / 2;
+      $this.vx = -4 + parseInt(Math.random() * 8);
+
+      $this.setPosition = function(x, y) {
+        if ($this.text) {
+          $this.x = x + (options.width / 2 - 180);
+          $this.y = y + (options.height / 2 + 100);
+        } else {
+          $this.x = x + (options.width / 2 - 250);
+          $this.y = y + (options.height / 2 - 175);
+        }
+      };
+
+      return $this;
+    }
+
+    function update() {
+      renderer.render(stage);
+
+      for (i = 0; i < particles.length; i++) {
+        var p = particles[i];
+
+        if (mousePos.x > p.x && mousePos.x < p.x + p.size && mousePos.y > p.y && mousePos.y < p.y + p.size) {
+          p.hovered = true;
+        }
+
+        p.scale.x = p.scale.y = scale = Math.max(Math.min(2.5 - (Math2.distance(p.x, p.y, mousePos.x, mousePos.y) / 160), 160), 1);
+
+
+        p.x = p.x + .2 * Math.sin(p.timer * .15)
+        p.y = p.y + .2 * Math.cos(p.timer * .15)
+        p.timer = p.timer + p.v;
+
+      }
+      window.requestAnimationFrame(update);
+    }
+
+    init();
+    update();
+</script>
 
       
     </div>
@@ -357,7 +527,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"404　| 漠上心河的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"　| 漠上心河的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
